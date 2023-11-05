@@ -14,7 +14,7 @@
 PyTropical is a Python package for tropical mathematics.
 
 * Free software: MIT license
-* Documentation: https://pytropical.readthedocs.io.
+* Documentation (TODO): https://pytropical.readthedocs.io.
 
 Installation
 --------
