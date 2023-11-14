@@ -88,6 +88,7 @@ class MaxPlusAlgebra:
             V.append(self.trop_mult(a, v[i]))
         return V
     
+    
     def matrix_trop_sum(self, A, B):
         '''Returns the tropical sum (maximum) of two matrices A and B.
         A, B: (array) matrices of real numbers.
@@ -99,6 +100,7 @@ class MaxPlusAlgebra:
                  M[i, j] = self.trop_sum(A[i, j], B[i, j])
         return M
     
+    
     def matrix_trop_scalar_mult(self, a, A):
         '''Returns the tropical scalar multiplication of a matrix A by a real number a.
         A, B: (array) matrices of real numbers.
@@ -108,6 +110,27 @@ class MaxPlusAlgebra:
         for i in range(num_rows):
             for j in range(num_cols):
                  M[i, j] = self.trop_mult(a, A[i, j])
+        return M
+    
+    
+    def matrix_trop_mult(self, A, B):
+        '''Returns the tropical multiplication of two matrices A and B.
+        A, B: (array) matrices of real numbers.
+        '''
+        A_num_rows, A_num_cols = A.shape
+        B_num_rows, B_num_cols = B.shape
+
+        if A_num_cols != B_num_rows:
+            print("A_num_cols must be equal to B_num_rows.")
+
+        M = np.zeros((A_num_rows, B_num_cols))
+
+        for i in range(A_num_rows):
+            Mult = []
+            for k in range(B_num_cols):
+                for j in range(B_num_rows):
+                    Mult.append(A[i, j] + B[j, k])
+                    M[i, k] = max(Mult)   
         return M
 
     
@@ -200,6 +223,7 @@ class MinPlusAlgebra:
                  M[i, j] = self.trop_sum(A[i, j], B[i, j])
         return M
     
+    
     def matrix_trop_scalar_mult(self, a, A):
         '''Returns the tropical scalar multiplication of a matrix A by a real number a.
         A, B: (array) matrices of real numbers.
@@ -211,4 +235,24 @@ class MinPlusAlgebra:
                  M[i, j] = self.trop_mult(a, A[i, j])
         return M
     
+    
+    def matrix_trop_mult(self, A, B):
+        '''Returns the tropical multiplication of two matrices A and B.
+        A, B: (array) matrices of real numbers.
+        '''
+        A_num_rows, A_num_cols = A.shape
+        B_num_rows, B_num_cols = B.shape
+
+        if A_num_cols != B_num_rows:
+            print("A_num_cols must be equal to B_num_rows.")
+
+        M = np.zeros((A_num_rows, B_num_cols))
+
+        for i in range(A_num_rows):
+            Mult = []
+            for k in range(B_num_cols):
+                for j in range(B_num_rows):
+                    Mult.append(A[i, j] + B[j, k])
+                    M[i, k] = min(Mult)   
+        return M
     
