@@ -249,10 +249,10 @@ class MinPlusAlgebra:
         M = np.zeros((A_num_rows, B_num_cols))
 
         for i in range(A_num_rows):
-            Mult = []
             for k in range(B_num_cols):
+                Mult = []
                 for j in range(B_num_rows):
                     Mult.append(A[i, j] + B[j, k])
-                    M[i, k] = min(Mult)   
+                M[i, k] = min(Mult)   
         return M
     
