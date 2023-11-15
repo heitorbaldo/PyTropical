@@ -121,7 +121,7 @@ class MaxPlusAlgebra:
         B_num_rows, B_num_cols = B.shape
 
         if A_num_cols != B_num_rows:
-            print("A_num_cols must be equal to B_num_rows.")
+            raise ValueError("A_num_cols must be equal to B_num_rows.")
 
         M = np.zeros((A_num_rows, B_num_cols))
 
@@ -134,7 +134,7 @@ class MaxPlusAlgebra:
         return M
 
     
-    
+
 class MinPlusAlgebra:
     
     def __init__(self):
@@ -244,7 +244,7 @@ class MinPlusAlgebra:
         B_num_rows, B_num_cols = B.shape
 
         if A_num_cols != B_num_rows:
-            print("A_num_cols must be equal to B_num_rows.")
+            raise ValueError("A_num_cols must be equal to B_num_rows.")
 
         M = np.zeros((A_num_rows, B_num_cols))
 
@@ -255,4 +255,4 @@ class MinPlusAlgebra:
                     Mult.append(A[i, j] + B[j, k])
                 M[i, k] = min(Mult)   
         return M
-    
+
