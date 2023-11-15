@@ -126,11 +126,11 @@ class MaxPlusAlgebra:
         M = np.zeros((A_num_rows, B_num_cols))
 
         for i in range(A_num_rows):
-            Mult = []
             for k in range(B_num_cols):
+                Mult = []
                 for j in range(B_num_rows):
                     Mult.append(A[i, j] + B[j, k])
-                    M[i, k] = max(Mult)   
+                M[i, k] = max(Mult)   
         return M
 
     
