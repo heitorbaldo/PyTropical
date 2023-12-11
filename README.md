@@ -21,6 +21,22 @@ pip3 install pytropical
 Examples
 --------
 
+```python
+from pytropical.tropical_algebra import MaxPlusAlgebra, MinPlusAlgebra
+from pytropical.utils import *
+
+maxp = MaxPlusAlgebra()
+inf = maxp.inf #inf is the additive zero
+
+#tropical sum
+maxp.trop_sum(2.8, 3)
+
+#tropical multiplication
+maxp.trop_mult(90, inf)
+
+#tropical exponentiation
+print("2^3 = 2⨀2⨀2 = ", maxp.trop_pow(2, 3))
+```
 
 Dependencies
 --------
