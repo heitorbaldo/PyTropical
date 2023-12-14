@@ -7,7 +7,7 @@
 PyTropical is a Python package for tropical mathematics.
 
 * Free software: MIT license
-* Documentation (TODO)
+* Documentation: TODO
 
 Installation
 --------
@@ -41,4 +41,4 @@ More examples are available in the ![Jupyter Notebook](https://github.com/heitor
 Dependencies
 --------
 
-* NumPy
+* ![NumPy](https://numpy.org/)
