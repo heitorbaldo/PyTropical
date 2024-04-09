@@ -1,5 +1,6 @@
 <img src="logo_pytropical2.png" alt="PyTropical" width="350"/>
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]()
 [![PyPI version](https://img.shields.io/pypi/v/pytropical)](https://pypi.org/project/pytropical/)
 
