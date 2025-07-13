@@ -8,7 +8,7 @@
 PyTropical is a Python package for tropical mathematics.
 
 * Free software: MIT license
-* Documentation: TODO
+* Documentation: [Documentation](https://github.com/heitorbaldo/PyTropical/blob/main/documentation_pytropical.pdf)
 
 Installation
 --------
@@ -22,11 +22,11 @@ Examples
 --------
 
 ```python
-from pytropical.tropical_algebra import MaxPlusAlgebra, MinPlusAlgebra
+from pytropical.tropical_algebra import MaxPlusAlgebra
 from pytropical.utils import *
 
 maxp = MaxPlusAlgebra()
-inf = maxp.inf #inf is the additive zero
+inf = maxp.inf #inf is the additive identity
 
 #tropical sum
 maxp.trop_sum(2.8, 3)
@@ -42,4 +42,4 @@ More examples are available in the ![Jupyter Notebook](https://github.com/heitor
 Dependencies
 --------
 
-* ![NumPy](https://numpy.org/)
+* [NumPy](https://numpy.org/)
