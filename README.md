@@ -37,7 +37,7 @@ maxp.trop_mult(90, inf)
 #tropical exponentiation
 print("2^3 = 2⨀2⨀2 = ", maxp.trop_pow(2, 3))
 ```
-More examples are available in the ![Jupyter Notebook](https://github.com/heitorbaldo/PyTropical/blob/main/Tutorial_PyTropical.ipynb).
+More examples are available in the [Jupyter Notebook](https://github.com/heitorbaldo/PyTropical/blob/main/Tutorial_PyTropical.ipynb).
 
 Dependencies
 --------
